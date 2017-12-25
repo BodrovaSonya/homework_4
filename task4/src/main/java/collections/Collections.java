@@ -29,29 +29,21 @@ public class Collections {
         System.out.println(statistics);
 
         // дерево для вывода слов в алфавитном порядке
-        Set<String> words = new TreeSet<String>();
+       /* Set<String> words = new TreeSet<String>();
         Iterator<Map.Entry<String,Integer>>entryIterator1 = statistics.entrySet().iterator();
         while (entryIterator1.hasNext()){
             words.add(entryIterator1.next().getKey());
         }
-        System.out.println(words);
+        System.out.println(words);*/
 
         // поиск самого часто встречающегося слова
-        Iterator<Map.Entry<String,Integer>>entryIterator = statistics.entrySet().iterator();
-        int maxValue = 0;
-        String maxKeyValue = null;
-        while (entryIterator.hasNext()){
-            if ((entryIterator.next().getValue()) > maxValue ) {
-                maxValue = entryIterator.next().getValue();
-                maxKeyValue = entryIterator.next().getKey();
+        int max = 0;
+        String maxKey = null;
+        for (String e: statistics.keySet()){
+            if (statistics.get(e) > max) {
+               // max = statistics.get(e);
             }
         }
-        if (maxValue > 0) {
-            System.out.println("Maximum: " + maxKeyValue + " " + maxValue);
-        }
-
-
-
 
     }
 
