@@ -25,15 +25,17 @@ public class Collections {
 
     public static void main(String[] args) throws FileNotFoundException {
         // reading from file
-        Collections collections = new Collections("D:\\Документы Бодрова\\Java курс\\ДЗ 4\\homework_4\\task4\\src\\main\\resources\\input.txt");
+        Collections collections = new Collections("D:\\Документы Бодрова\\Java курс\\ДЗ 4\\homework_4\\task4\\src\\main\\java\\collections\\input.txt");
 
         // statistics to the console
+        System.out.println("Words from file: ");
         System.out.println(collections.getStatistics());
 
         //alphabetical ordering
         collections.alphabeticalOrdering(collections.getStatistics());
 
         //output of the most common word
+        System.out.println("The most common word: ");
         collections.mostOften(collections.getStatistics());
 
     }
@@ -65,6 +67,7 @@ public class Collections {
         while (entryIterator1.hasNext()){
             words.add(entryIterator1.next().getKey());
         }
+        System.out.println("Alphabetical order of words");
         System.out.println(words);
     }
 
