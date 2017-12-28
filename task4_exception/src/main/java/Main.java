@@ -1,6 +1,12 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * IncorrectOperationException added
+ * Added check for incorrect answer to exit the program
+ * Check for InputMismatchException is corrected
+ */
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
