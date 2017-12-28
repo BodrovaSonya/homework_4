@@ -26,7 +26,6 @@ public class Main {
                 a.printStackTrace();
                 break;
             } catch (IncorrectOperationException e) {
-                System.out.print("Incorrect operation for calculate: ");
                 e.printStackTrace();
                 break;
             }
