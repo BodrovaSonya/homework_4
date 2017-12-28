@@ -1,39 +1,13 @@
 /**
- * div which implements Operation
+ * div which implements IOperation
  */
 
-public class Div implements Operation{
-    private double a;
-    private double b;
-    private double result;
-
-    public Div (double a_, double b_){
-        setA(a_);
-        setB(b_);
-        setResult(a - b);
-    }
-
-    public void setA(double a) {
-        this.a = a;
-    }
-
-    public void setB(double b) {
-        this.b = b;
-    }
-
-    public void setResult(double result) {
-        this.result = result;
-    }
-
-    public double getA() {
-        return a;
-    }
-
-    public double getB() {
-        return b;
+public class Div extends Operation {
+    public Div(double a_, double b_) {
+        super(a_, b_);
     }
 
     public double getResult() {
-        return result;
+        return super.getA() - super.getB();
     }
 }
